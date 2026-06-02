@@ -3,7 +3,7 @@ set -euo pipefail
 
 PROJECT_DIR="$(cd "$(dirname "$0")" && pwd)"
 OUTPUT_DIR="$PROJECT_DIR/dist"
-APP_NAME="文件快速分拣"
+APP_NAME="File Triage"
 APP_DIR="$OUTPUT_DIR/$APP_NAME.app"
 ZIP_PATH="$OUTPUT_DIR/$APP_NAME.zip"
 
@@ -24,13 +24,13 @@ cat > "$APP_DIR/Contents/Info.plist" <<'PLIST'
     <key>CFBundleDevelopmentRegion</key>
     <string>zh_CN</string>
     <key>CFBundleExecutable</key>
-    <string>文件快速分拣</string>
+    <string>File Triage</string>
     <key>CFBundleIdentifier</key>
     <string>io.github.filetriage.mac</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
-    <string>文件快速分拣</string>
+    <string>File Triage</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleShortVersionString</key>

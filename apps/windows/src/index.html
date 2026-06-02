@@ -3,50 +3,54 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文件快速分拣</title>
+    <title>File Triage</title>
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
     <main class="app">
       <header class="toolbar">
-        <button id="addSources" title="添加一个或多个需要整理的文件夹">📁 来源</button>
-        <button id="rescan" title="根据当前来源重新生成待整理文件队列">↻ 重新扫描</button>
-        <label title="开启后会扫描来源文件夹里的子文件夹">
+        <button id="addSources">📁 Sources</button>
+        <button id="rescan">↻ Rescan</button>
+        <label id="subfoldersLabel">
           <input id="includeSubfolders" type="checkbox">
-          子文件夹
+          <span>Subfolders</span>
         </label>
-        <label title="开启后会包含隐藏文件，日常整理建议关闭">
+        <label id="hiddenLabel">
           <input id="includeHidden" type="checkbox">
-          隐藏文件
+          <span>Hidden Files</span>
         </label>
+        <select id="language" title="Switch interface language">
+          <option value="en">English</option>
+          <option value="zh">中文</option>
+        </select>
         <span class="spacer"></span>
         <span id="progress" class="progress">0 / 0</span>
-        <span id="status" class="status">请选择一个文件夹开始</span>
-        <button id="undo" title="撤销上一次移动操作。注意：Windows 回收站恢复需要手动从回收站还原。">↶ 撤销</button>
+        <span id="status" class="status">Choose a folder to begin</span>
+        <button id="undo">↶ Undo</button>
       </header>
 
       <section class="workspace">
         <aside class="sidebar">
           <div class="section-title">
-            <span>来源</span>
-            <button id="addSourcesSmall" title="添加来源文件夹">＋</button>
+            <span id="sourcesTitle">Sources</span>
+            <button id="addSourcesSmall">＋</button>
           </div>
-          <div id="sources" class="list empty">添加一个或多个文件夹后开始扫描。</div>
+          <div id="sources" class="list empty">Add one or more folders to scan.</div>
 
           <div class="divider"></div>
 
           <div class="section-title">
-            <span>目标</span>
-            <button id="addTargets" title="添加文件要移动到的目标文件夹">＋</button>
+            <span id="targetsTitle">Targets</span>
+            <button id="addTargets">＋</button>
           </div>
-          <div id="targets" class="list empty">添加目标文件夹后，下方会出现分拣按钮。</div>
+          <div id="targets" class="list empty">Add target folders to show sorting buttons below.</div>
         </aside>
 
         <section class="preview-pane">
           <div id="preview" class="preview empty-preview">
             <div class="empty-icon">▣</div>
-            <div class="empty-title">没有选中文件</div>
-            <div class="empty-copy">请选择来源文件夹，或添加更多文件后继续。</div>
+            <div class="empty-title">No File Selected</div>
+            <div class="empty-copy">Choose a source folder or add more files to continue.</div>
           </div>
 
           <div id="details" class="details hidden">
@@ -56,9 +60,9 @@
               <div id="filePath" class="file-path"></div>
             </div>
             <div class="details-actions">
-              <button id="reveal" title="在资源管理器中定位当前文件">定位</button>
-              <button id="reload" title="重新加载当前文件预览">刷新</button>
-              <button id="openFile" title="用系统默认程序打开当前文件">打开</button>
+              <button id="reveal">Reveal</button>
+              <button id="reload">Reload</button>
+              <button id="openFile">Open</button>
             </div>
           </div>
 

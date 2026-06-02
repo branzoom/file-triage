@@ -16,7 +16,7 @@
   },
   "build": {
     "appId": "io.github.filetriage.windows",
-    "productName": "文件快速分拣",
+    "productName": "File Triage",
     "directories": {
       "output": "dist"
     },

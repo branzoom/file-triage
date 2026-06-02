@@ -37,6 +37,16 @@ button {
   cursor: pointer;
 }
 
+select {
+  height: 32px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 8px;
+  background: var(--panel);
+  color: var(--text);
+  font: inherit;
+}
+
 button:hover {
   border-color: #b7c1d2;
   background: var(--panel-2);

@@ -18,7 +18,7 @@ function createWindow() {
     height: 760,
     minWidth: 960,
     minHeight: 640,
-    title: '文件快速分拣',
+    title: 'File Triage',
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
