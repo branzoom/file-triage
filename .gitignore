@@ -1,0 +1,26 @@
+.DS_Store
+
+# Swift / macOS
+.build/
+DerivedData/
+*.xcuserdata/
+*.xcuserstate
+
+# Electron / Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+outputs/
+*.app
+*.dmg
+*.pkg
+*.exe
+*.zip
+
+# Local editor files
+.idea/
+.vscode/

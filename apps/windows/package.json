@@ -1,0 +1,40 @@
+{
+  "name": "file-triage-windows",
+  "version": "0.1.0",
+  "description": "Windows file triage app for quickly sorting messy folders.",
+  "author": "File Triage Contributors",
+  "main": "src/main.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "electron .",
+    "check": "node --check src/main.js && node --check src/preload.js && node --check src/renderer.js",
+    "dist:win": "electron-builder --win nsis portable --x64"
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "io.github.filetriage.windows",
+    "productName": "文件快速分拣",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}
