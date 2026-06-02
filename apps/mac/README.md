@@ -4,6 +4,8 @@
 
 A native macOS prototype for quickly sorting messy folders. It uses SwiftUI, AppKit, and Quick Look.
 
+![File Triage macOS screenshot](../../docs/images/macos-main.png)
+
 ## Run
 
 ```bash

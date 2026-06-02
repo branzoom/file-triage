@@ -4,6 +4,8 @@
 
 File Triage is an open-source tool for quickly sorting messy folders. Pick source folders such as Desktop, Downloads, iCloud Drive, or temporary folders, preview files one by one, then move each file to a target folder, skip it, or send it to Trash / Recycle Bin with buttons or keyboard shortcuts.
 
+![File Triage macOS screenshot](docs/images/macos-main.png)
+
 This repository contains two apps:
 
 - `apps/mac`: native macOS app built with SwiftUI, AppKit, and Quick Look.

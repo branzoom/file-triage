@@ -4,6 +4,8 @@
 
 这是一个原生 macOS 文件快速分拣原型，适合整理桌面、下载、iCloud 文件夹和各种临时目录。它使用 SwiftUI、AppKit 和 Quick Look。
 
+![File Triage macOS 截图](../../docs/images/macos-main.png)
+
 ## 运行
 
 ```bash
